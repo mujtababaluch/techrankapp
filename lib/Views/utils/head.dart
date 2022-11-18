@@ -6,12 +6,12 @@ import 'package:techrank/Views/utils/search.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSize {
   var check = false;
+
   @override
   Widget build(BuildContext context) {
     return PreferredSize(
       preferredSize: Size(8.h, 10.h),
       child: AppBar(
-        
         //Search wala kaam//
 
         // actions: [
@@ -26,6 +26,7 @@ class MyAppBar extends StatelessWidget implements PreferredSize {
         //         )),
         //   )
         // ],
+        elevation: 0,
         backgroundColor: topbarbg,
         title: Align(
           alignment: Alignment.center,
@@ -54,6 +55,7 @@ class MyBar extends StatelessWidget implements PreferredSize {
     return PreferredSize(
       preferredSize: Size(8.h, 10.h),
       child: AppBar(
+        elevation: 0,
         actions: [
           Padding(
             padding: EdgeInsets.only(right: 1.h, top: 1.h),
@@ -68,7 +70,7 @@ class MyBar extends StatelessWidget implements PreferredSize {
         title: Align(
           alignment: Alignment.center,
           child: Image(
-            image: AssetImage('assets/TechRank.png'),
+            image: const AssetImage('assets/TechRank.png'),
             height: 50.h,
             width: 60.w,
           ),

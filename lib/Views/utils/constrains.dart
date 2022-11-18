@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 Color topbarbg = const Color(0xff000000);
 
-Color stdcardbg = const Color(0xff000000);
+Color balckcolor = const Color(0xff100F0F);
+
+Color whitecolor = const Color(0xffFEFBF6);
+Color greycolor = const Color(0xff413F42);
 
 Color BottomBaractive = const Color(0xffFFB200);
-
-Color bottombarunactive = const Color(0xffEEEEEE);
 
 Color redcard = const Color(0xffE21717); //E21717
 Color red_card = const Color(0xffEC7272);

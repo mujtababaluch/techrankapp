@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:techrank/Views/MainScreen.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'Routes/Routes.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
