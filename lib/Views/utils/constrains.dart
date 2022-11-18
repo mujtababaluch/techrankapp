@@ -5,7 +5,7 @@ Color topbarbg = const Color(0xff000000);
 Color balckcolor = const Color(0xff100F0F);
 
 Color whitecolor = const Color(0xffFEFBF6);
-Color greycolor = const Color(0xff413F42);
+Color greycolor = const Color(0xffB2B2B2);
 
 Color BottomBaractive = const Color(0xffFFB200);
 
