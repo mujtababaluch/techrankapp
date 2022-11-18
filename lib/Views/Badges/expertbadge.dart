@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:techrank/Views/Technologies/expertBadge/appdev.dart';
+import 'package:techrank/Views/Technologies/expertBadge/database.dart';
 import 'package:techrank/Views/Technologies/expertBadge/office.dart';
 import 'package:techrank/Views/Technologies/expertBadge/webdes.dart';
+import 'package:techrank/Views/Technologies/expertBadge/webdev.dart';
 import 'package:techrank/Views/utils/cards.dart';
 import 'package:techrank/Views/utils/constrains.dart';
 import 'package:techrank/Views/utils/head.dart';
@@ -37,13 +40,11 @@ class ExpertBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: GestureDetector(
-                      onTap: () {
-                        Get.to(
-                          BlueOffice(),
-                          transition: Transition.fade,
-                          duration: Duration(milliseconds: 500),
-                        );
-                      },
+                      onTap: () => Get.to(
+                        () => BlueOffice(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -61,13 +62,11 @@ class ExpertBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: GestureDetector(
-                      onTap: () {
-                        Get.to(
-                          BlueWebdes(),
-                          transition: Transition.fade,
-                          duration: Duration(milliseconds: 500),
-                        );
-                      },
+                      onTap: () => Get.to(
+                        () => BlueWebdes(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -89,7 +88,11 @@ class ExpertBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        () => BlueWebdev(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -107,7 +110,11 @@ class ExpertBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        () => BlueDatabase(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -129,7 +136,11 @@ class ExpertBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topCenter,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        () => BlueAppdev(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(

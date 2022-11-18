@@ -52,13 +52,11 @@ class MainScreen extends StatelessWidget {
                           Row(
                             children: [
                               GestureDetector(
-                                onTap: () {
-                                  Get.to(
-                                    BronzeBadge(),
-                                    transition: Transition.fade,
-                                    duration: Duration(milliseconds: 500),
-                                  );
-                                },
+                                onTap: () => Get.to(
+                                  () => BronzeBadge(),
+                                  transition: Transition.fade,
+                                  duration: Duration(milliseconds: 500),
+                                ),
                                 child: Container(
                                   padding: EdgeInsets.only(top: 3.h),
                                   child: Mycard(
@@ -70,13 +68,11 @@ class MainScreen extends StatelessWidget {
                                 ),
                               ),
                               GestureDetector(
-                                onTap: () {
-                                  Get.to(
-                                    SilverBadge(),
-                                    transition: Transition.fade,
-                                    duration: Duration(milliseconds: 500),
-                                  );
-                                },
+                                onTap: () => Get.to(
+                                  () => SilverBadge(),
+                                  transition: Transition.fade,
+                                  duration: Duration(milliseconds: 500),
+                                ),
                                 child: Container(
                                   padding: EdgeInsets.only(left: 4.h, top: 3.h),
                                   child: Mycard(
@@ -92,13 +88,11 @@ class MainScreen extends StatelessWidget {
                           Row(
                             children: [
                               GestureDetector(
-                                onTap: () {
-                                  Get.to(
-                                    GoldBadge(),
-                                    transition: Transition.fade,
-                                    duration: Duration(milliseconds: 500),
-                                  );
-                                },
+                                onTap: () => Get.to(
+                                  () => GoldBadge(),
+                                  transition: Transition.fade,
+                                  duration: Duration(milliseconds: 500),
+                                ),
                                 child: Container(
                                   padding: EdgeInsets.only(top: 3.h),
                                   child: Mycard(
@@ -110,13 +104,11 @@ class MainScreen extends StatelessWidget {
                                 ),
                               ),
                               GestureDetector(
-                                onTap: () {
-                                  Get.to(
-                                    ExpertBadge(),
-                                    transition: Transition.fade,
-                                    duration: Duration(milliseconds: 500),
-                                  );
-                                },
+                                onTap: () => Get.to(
+                                  () => ExpertBadge(),
+                                  transition: Transition.fade,
+                                  duration: Duration(milliseconds: 500),
+                                ),
                                 child: Container(
                                   padding: EdgeInsets.only(left: 4.h, top: 3.h),
                                   child: Mycard(
@@ -202,13 +194,11 @@ class MainScreen extends StatelessWidget {
                                     ),
                                   ),
                                   GestureDetector(
-                                    onTap: () {
-                                      Get.to(
-                                        Profile(),
-                                        transition: Transition.fade,
-                                        duration: Duration(milliseconds: 500),
-                                      );
-                                    },
+                                    onTap: () => Get.to(
+                                      () => Profile(),
+                                      transition: Transition.fade,
+                                      duration: Duration(milliseconds: 500),
+                                    ),
                                     child: Padding(
                                       padding: EdgeInsets.only(
                                           top: 2.h, left: 2.h, right: 1.h),
