@@ -34,7 +34,7 @@ class _ProfileState extends State<Profile> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 6.h, bottom: 6.h, left: 20.w),
-                  child: InkWell(
+                  child: GestureDetector(
                     onTap: () {
                       pickImage(ImageSource.camera);
                     },
@@ -139,10 +139,8 @@ class _ProfileState extends State<Profile> {
                 padding: EdgeInsets.fromLTRB(0, 8.h, 2.h, 0),
                 child: Align(
                   alignment: Alignment.topCenter,
-                  child: InkWell(
-                    onTap: () {
-                      imagePickerOption();
-                    },
+                  child: GestureDetector(
+                    onTap: () => imagePickerOption(),
                     child: Container(
                       height: 18.h,
                       width: 37.w,
@@ -343,7 +341,7 @@ class _ProfileState extends State<Profile> {
                             alignment: Alignment.topLeft,
                             child: GFButton(
                               size: GFSize.LARGE,
-                              onPressed: () {},
+                              onPressed: () => {},
                               text: "Edit Profile",
                               color: topbarbg,
                               textColor: Colors.white,
@@ -357,7 +355,7 @@ class _ProfileState extends State<Profile> {
                             alignment: Alignment.topLeft,
                             child: GFButton(
                               size: GFSize.LARGE,
-                              onPressed: () {},
+                              onPressed: () => {},
                               text: "Logout",
                               color: topbarbg,
                               textColor: Colors.white,

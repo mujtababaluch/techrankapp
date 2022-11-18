@@ -3,8 +3,8 @@ import 'package:sizer/sizer.dart';
 import 'package:techrank/Views/utils/cards.dart';
 import 'package:techrank/Views/utils/head.dart';
 
-class RedWebdev extends StatelessWidget {
-  const RedWebdev({super.key});
+class BlueWebdev extends StatelessWidget {
+  const BlueWebdev({super.key});
 
   @override
   Widget build(BuildContext context) {

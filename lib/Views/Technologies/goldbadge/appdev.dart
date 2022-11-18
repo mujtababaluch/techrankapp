@@ -3,8 +3,8 @@ import 'package:sizer/sizer.dart';
 import 'package:techrank/Views/utils/cards.dart';
 import 'package:techrank/Views/utils/head.dart';
 
-class RedWebdev extends StatelessWidget {
-  const RedWebdev({super.key});
+class GreenAppdev extends StatelessWidget {
+  const GreenAppdev({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +25,8 @@ class RedWebdev extends StatelessWidget {
                       child: Container(
                         width: 20.h,
                         child: const Modulecard(
-                          Cardimage: AssetImage('assets/php.png'),
-                          Textinfo: 'Php',
+                          Cardimage: AssetImage('assets/java.png'),
+                          Textinfo: 'Java',
                         ),
                       ),
                     ),
@@ -35,8 +35,8 @@ class RedWebdev extends StatelessWidget {
                       child: Container(
                         width: 20.h,
                         child: const Modulecard(
-                          Cardimage: AssetImage('assets/react.png'),
-                          Textinfo: 'React',
+                          Cardimage: AssetImage('assets/swift.png'),
+                          Textinfo: 'Swift',
                         ),
                       ),
                     )

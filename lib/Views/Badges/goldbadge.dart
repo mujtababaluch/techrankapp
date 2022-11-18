@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:techrank/Views/Technologies/goldbadge/appdev.dart';
+import 'package:techrank/Views/Technologies/goldbadge/database.dart';
 import 'package:techrank/Views/Technologies/goldbadge/office.dart';
 import 'package:techrank/Views/Technologies/goldbadge/webdes.dart';
+import 'package:techrank/Views/Technologies/goldbadge/webdev.dart';
 import 'package:techrank/Views/utils/cards.dart';
 import 'package:techrank/Views/utils/constrains.dart';
 import 'package:techrank/Views/utils/head.dart';
@@ -37,13 +40,11 @@ class GoldBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: GestureDetector(
-                      onTap: () {
-                        Get.to(
-                          GreenOffice(),
-                          transition: Transition.fade,
-                          duration: Duration(milliseconds: 500),
-                        );
-                      },
+                      onTap: () => Get.to(
+                        () => GreenOffice(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -61,13 +62,11 @@ class GoldBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: GestureDetector(
-                      onTap: () {
-                        Get.to(
-                          GreenWebdes(),
-                          transition: Transition.fade,
-                          duration: Duration(milliseconds: 500),
-                        );
-                      },
+                      onTap: () => Get.to(
+                        () => GreenWebdes(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -89,7 +88,11 @@ class GoldBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        () => GreenWebdev(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -107,7 +110,11 @@ class GoldBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        () => GreenDatabase(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -129,7 +136,11 @@ class GoldBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topCenter,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        () => GreenAppdev(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(

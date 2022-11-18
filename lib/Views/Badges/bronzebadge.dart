@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:techrank/Views/Technologies/bronzeBadge/appdev.dart';
+import 'package:techrank/Views/Technologies/bronzeBadge/database.dart';
 import 'package:techrank/Views/Technologies/bronzeBadge/office.dart';
 import 'package:techrank/Views/Technologies/bronzeBadge/webdes.dart';
+import 'package:techrank/Views/Technologies/bronzeBadge/webdev.dart';
 import 'package:techrank/Views/utils/cards.dart';
 import 'package:techrank/Views/utils/constrains.dart';
 import 'package:techrank/Views/utils/head.dart';
@@ -37,13 +40,11 @@ class BronzeBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: GestureDetector(
-                      onTap: () {
-                        Get.to(
-                          RedOffice(),
-                          transition: Transition.fade,
-                          duration: Duration(milliseconds: 500),
-                        );
-                      },
+                      onTap: () => Get.to(
+                        () => RedOffice(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -61,13 +62,11 @@ class BronzeBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: GestureDetector(
-                      onTap: () {
-                        Get.to(
-                          RedWebdes(),
-                          transition: Transition.fade,
-                          duration: Duration(milliseconds: 500),
-                        );
-                      },
+                      onTap: () => Get.to(
+                        () => RedWebdes(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -89,7 +88,11 @@ class BronzeBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        () => RedWebdev(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -107,7 +110,11 @@ class BronzeBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        () => RedDatabase(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -129,7 +136,11 @@ class BronzeBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topCenter,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        () => RedAppdev(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
+import 'package:techrank/Views/Technologies/silverBadge/appdev.dart';
+import 'package:techrank/Views/Technologies/silverBadge/database.dart';
 import 'package:techrank/Views/Technologies/silverBadge/office.dart';
 import 'package:techrank/Views/Technologies/silverBadge/webdes.dart';
+import 'package:techrank/Views/Technologies/silverBadge/webdev.dart';
 import 'package:techrank/Views/utils/cards.dart';
 import 'package:techrank/Views/utils/constrains.dart';
 import 'package:techrank/Views/utils/head.dart';
@@ -37,13 +39,11 @@ class SilverBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: GestureDetector(
-                      onTap: () {
-                        Get.to(
-                          YellowOffice(),
-                          transition: Transition.fade,
-                          duration: Duration(milliseconds: 500),
-                        );
-                      },
+                      onTap: () => Get.to(
+                        YellowOffice(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -61,13 +61,11 @@ class SilverBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: GestureDetector(
-                      onTap: () {
-                        Get.to(
-                          YellowWebdes(),
-                          transition: Transition.fade,
-                          duration: Duration(milliseconds: 500),
-                        );
-                      },
+                      onTap: () => Get.to(
+                        YellowWebdes(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -89,7 +87,11 @@ class SilverBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        YellowWebdev(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -107,7 +109,11 @@ class SilverBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        YellowDatabase(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
@@ -129,7 +135,11 @@ class SilverBadge extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topCenter,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () => Get.to(
+                        YellowAppdev(),
+                        transition: Transition.fade,
+                        duration: Duration(milliseconds: 500),
+                      ),
                       child: Container(
                         width: 20.h,
                         child: Techcard(
