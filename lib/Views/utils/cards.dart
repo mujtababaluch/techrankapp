@@ -166,12 +166,12 @@ class stdcard extends StatelessWidget {
           padding: EdgeInsets.all(1.h),
           height: 15.h,
           width: 100.w,
-          decoration:  BoxDecoration(
+          decoration: BoxDecoration(
             color: Colors.white,
             shape: BoxShape.rectangle,
-            borderRadius:  BorderRadius.circular(20.0),
+            borderRadius: BorderRadius.circular(20.0),
             boxShadow: <BoxShadow>[
-               BoxShadow(
+              BoxShadow(
                 color: Color(0xff797979),
                 blurRadius: 10.0,
                 offset: new Offset(3.0, 5.0),
@@ -440,32 +440,37 @@ class EarnedBadgecard extends StatelessWidget {
 class Techcard extends StatelessWidget {
   final AssetImage Cardimage;
   final String Textinfo;
+  final Color Cardcolorone;
+  final Color Cardcolortwo;
 
-  const Techcard({required this.Cardimage, required this.Textinfo});
+  const Techcard(
+      {required this.Cardimage,
+      required this.Textinfo,
+      required this.Cardcolorone,
+      required this.Cardcolortwo});
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      height: 25.h,
+      height: 22.5.h,
       decoration: BoxDecoration(
+        gradient: LinearGradient(
+            colors: [Cardcolorone, Cardcolortwo],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight),
         borderRadius: BorderRadius.circular(
           25.0,
         ),
-        boxShadow: [
-          BoxShadow(
-              color: Colors.black.withOpacity(0.25),
-              spreadRadius: 1.0,
-              blurRadius: 4,
-              offset: Offset(4.0, 5.0)),
+        boxShadow: const [
+          BoxShadow(spreadRadius: 1.0, blurRadius: 4, offset: Offset(4.0, 5.0)),
         ],
-        color: Techycard,
       ),
       child: Column(
         children: [
           Container(
               child: Padding(
-            padding: EdgeInsets.fromLTRB(0, 4.h, 0, 0),
+            padding: EdgeInsets.fromLTRB(0, 2.h, 0, 0),
             child: Image(
               image: Cardimage,
               height: 12.h,
