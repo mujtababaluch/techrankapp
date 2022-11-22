@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:techrank/Views/Badges/bronzebadge.dart';
 import 'package:techrank/Views/Badges/expertbadge.dart';

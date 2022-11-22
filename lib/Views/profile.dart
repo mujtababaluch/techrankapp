@@ -1,16 +1,17 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'dart:io';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:techrank/Views/utils/constrains.dart';
-import 'package:techrank/Views/utils/customshape.dart';
-import 'package:techrank/Views/utils/head.dart';
 import 'package:getwidget/getwidget.dart';
 
 class Profile extends StatefulWidget {
+  const Profile({super.key});
+
   @override
   State<Profile> createState() => _ProfileState();
 }
@@ -65,7 +66,7 @@ class _ProfileState extends State<Profile> {
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(100)),
-                      child: Icon(
+                      child: const Icon(
                         Icons.collections_rounded,
                       ),
                     ),
@@ -85,7 +86,7 @@ class _ProfileState extends State<Profile> {
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(100)),
-                      child: Icon(Icons.close_rounded),
+                      child: const Icon(Icons.close_rounded),
                     ),
                   ),
                 ),
@@ -115,28 +116,45 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyBar(),
       body: Container(
         height: 100.h,
         child: CustomPaint(
-          painter: ProfileCurvePainter(),
           child: Stack(
             children: [
-              Padding(
-                padding: EdgeInsets.only(top: 2.h, left: 2.h),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    'Profile',
-                    style: GoogleFonts.poppins(
-                        color: Colors.white,
-                        fontSize: 3.5.h,
-                        fontWeight: FontWeight.w600),
+              Container(
+                height: 39.h,
+                width: 100.h,
+                decoration: BoxDecoration(
+                  color: topbarbg,
+                  borderRadius: const BorderRadius.only(
+                    bottomRight: Radius.circular(30),
+                    bottomLeft: Radius.circular(30),
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(0, 8.h, 2.h, 0),
+                padding: EdgeInsets.fromLTRB(1.h, 4.h, 0, 0),
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: IconButton(
+                    onPressed: () => Get.back(),
+                    icon: Icon(Icons.arrow_back_ios,
+                        color: Colors.white, size: 2.5.h),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 2.h),
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Image(
+                    image: const AssetImage('assets/TechRank.png'),
+                    height: 10.h,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 13.h, 2.h, 0),
                 child: Align(
                   alignment: Alignment.topCenter,
                   child: GestureDetector(
@@ -148,7 +166,7 @@ class _ProfileState extends State<Profile> {
                         color: topbarbg,
                         border: Border.all(
                           color: Colors.black,
-                          width: 1.w,
+                          width: 0.2.w,
                         ),
                         borderRadius: const BorderRadius.all(
                           Radius.circular(100),
@@ -180,7 +198,7 @@ class _ProfileState extends State<Profile> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(0, 27.h, 0, 0),
+                padding: EdgeInsets.fromLTRB(0, 33.h, 0, 0),
                 child: Align(
                   alignment: Alignment.topCenter,
                   child: Text(

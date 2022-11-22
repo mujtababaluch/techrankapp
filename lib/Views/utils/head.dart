@@ -1,18 +1,20 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:techrank/Views/utils/constrains.dart';
-import 'package:techrank/Views/utils/search.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSize {
   var check = false;
+
+  MyAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return PreferredSize(
       preferredSize: Size(8.h, 10.h),
       child: AppBar(
-        //Search wala kaam//
+        //Search //
 
         // actions: [
         //   Padding(
@@ -26,6 +28,7 @@ class MyAppBar extends StatelessWidget implements PreferredSize {
         //         )),
         //   )
         // ],
+
         elevation: 0,
         backgroundColor: topbarbg,
         title: Align(
@@ -41,15 +44,17 @@ class MyAppBar extends StatelessWidget implements PreferredSize {
   }
 
   @override
-  // TODO: implement child
   Widget get child => throw UnimplementedError();
 
   @override
-  // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(8.h);
+  Size get preferredSize => Size.fromHeight(
+        8.h,
+      );
 }
 
 class MyBar extends StatelessWidget implements PreferredSize {
+  const MyBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return PreferredSize(
@@ -80,10 +85,8 @@ class MyBar extends StatelessWidget implements PreferredSize {
   }
 
   @override
-  // TODO: implement child
   Widget get child => throw UnimplementedError();
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => Size.fromHeight(8.h);
 }
