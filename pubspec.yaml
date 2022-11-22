@@ -39,6 +39,7 @@ dependencies:
   get: ^4.6.5
   flutter_native_splash: ^2.2.14
   sizer: ^2.0.15
+  responsive_sizer: ^3.1.1
   image_picker: ^0.8.6
   google_fonts: ^3.0.1
   getwidget: ^3.0.1

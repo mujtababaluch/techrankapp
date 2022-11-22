@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 Color topbarbg = const Color(0xff000000);
@@ -24,7 +26,7 @@ Color blue_card = const Color(0xff7978FF);
 Color Techycard = const Color(0xffCFD2CF);
 
 Color othercard = const Color(0xffEEEEEE);
-// AssetImage normalcard = AssetImage('assets/logo.png');
+
 AssetImage bronzebadge = const AssetImage('assets/bronzebadge.png');
 
 AssetImage silverbadge = const AssetImage('assets/silverbadge.png');

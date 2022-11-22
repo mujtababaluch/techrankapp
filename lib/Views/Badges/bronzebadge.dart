@@ -16,7 +16,7 @@ class BronzeBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyBar(),
+      appBar: const MyBar(),
       body: Container(
         color: Colors.white,
         padding: EdgeInsets.fromLTRB(2.h, 7.h, 2.h, 0),
@@ -32,129 +32,126 @@ class BronzeBadge extends StatelessWidget {
             //         fontWeight: FontWeight.w600),
             //   ),
             // )
-
-            Row(
+            Column(
               children: [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(1.h, 2.h, 0, 0),
-                  child: Align(
-                    alignment: Alignment.topRight,
-                    child: GestureDetector(
-                      onTap: () => Get.to(
-                        () => RedOffice(),
-                        transition: Transition.fade,
-                        duration: Duration(milliseconds: 500),
-                      ),
-                      child: Container(
-                        width: 20.h,
-                        child: Techcard(
-                          Cardimage: const AssetImage('assets/office.png'),
-                          Textinfo: 'Office',
-                          Cardcolorone: whitecolor,
-                          Cardcolortwo: greycolor,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(1.h, 2.h, 0, 0),
+                      child: Align(
+                        alignment: Alignment.topRight,
+                        child: InkWell(
+                          onTap: () => Get.to(
+                            () => const RedOffice(),
+                            transition: Transition.fade,
+                            duration: const Duration(milliseconds: 500),
+                          ),
+                          child: SizedBox(
+                            width: 20.h,
+                            child: Techcard(
+                              Cardimage: const AssetImage('assets/office.png'),
+                              Textinfo: 'Office',
+                              Cardcolorone: whitecolor,
+                              Cardcolortwo: greycolor,
+                            ),
+                          ),
                         ),
                       ),
                     ),
-                  ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(3.h, 2.h, 0, 0),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: InkWell(
+                          onTap: () => Get.to(
+                            () => const RedWebdes(),
+                            transition: Transition.fade,
+                            duration: const Duration(milliseconds: 500),
+                          ),
+                          child: SizedBox(
+                            width: 20.h,
+                            child: Techcard(
+                              Cardimage: const AssetImage('assets/design.png'),
+                              Textinfo: 'Web-Design',
+                              Cardcolorone: whitecolor,
+                              Cardcolortwo: greycolor,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(4.h, 2.h, 0, 0),
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: GestureDetector(
-                      onTap: () => Get.to(
-                        () => RedWebdes(),
-                        transition: Transition.fade,
-                        duration: Duration(milliseconds: 500),
-                      ),
-                      child: Container(
-                        width: 20.h,
-                        child: Techcard(
-                          Cardimage: const AssetImage('assets/design.png'),
-                          Textinfo: 'Web-Design',
-                          Cardcolorone: whitecolor,
-                          Cardcolortwo: greycolor,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(1.h, 2.h, 0, 0),
+                      child: InkWell(
+                        onTap: () => Get.to(
+                          () => const RedWebdev(),
+                          transition: Transition.fade,
+                          duration: const Duration(milliseconds: 500),
+                        ),
+                        child: SizedBox(
+                          width: 20.h,
+                          child: Techcard(
+                            Cardimage: const AssetImage('assets/coding.png'),
+                            Textinfo: 'Web-dev',
+                            Cardcolorone: whitecolor,
+                            Cardcolortwo: greycolor,
+                          ),
                         ),
                       ),
                     ),
-                  ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(3.h, 2.h, 0, 0),
+                      child: InkWell(
+                        onTap: () => Get.to(
+                          () => const RedDatabase(),
+                          transition: Transition.fade,
+                          duration: const Duration(milliseconds: 500),
+                        ),
+                        child: SizedBox(
+                          width: 20.h,
+                          child: Techcard(
+                            Cardimage: const AssetImage('assets/database.png'),
+                            Textinfo: 'DataBase',
+                            Cardcolorone: whitecolor,
+                            Cardcolortwo: greycolor,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: 2.h),
+                      child: InkWell(
+                        onTap: () => Get.to(
+                          () => const RedAppdev(),
+                          transition: Transition.fade,
+                          duration: const Duration(milliseconds: 500),
+                        ),
+                        child: SizedBox(
+                          width: 20.h,
+                          child: Techcard(
+                            Cardimage: const AssetImage('assets/app.png'),
+                            Textinfo: 'App-Dev',
+                            Cardcolorone: whitecolor,
+                            Cardcolortwo: greycolor,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(1.h, 2.h, 0, 0),
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: GestureDetector(
-                      onTap: () => Get.to(
-                        () => RedWebdev(),
-                        transition: Transition.fade,
-                        duration: Duration(milliseconds: 500),
-                      ),
-                      child: Container(
-                        width: 20.h,
-                        child: Techcard(
-                          Cardimage: const AssetImage('assets/coding.png'),
-                          Textinfo: 'Web-dev',
-                          Cardcolorone: whitecolor,
-                          Cardcolortwo: greycolor,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(4.h, 2.h, 0, 0),
-                  child: Align(
-                    alignment: Alignment.topRight,
-                    child: GestureDetector(
-                      onTap: () => Get.to(
-                        () => RedDatabase(),
-                        transition: Transition.fade,
-                        duration: Duration(milliseconds: 500),
-                      ),
-                      child: Container(
-                        width: 20.h,
-                        child: Techcard(
-                          Cardimage: const AssetImage('assets/database.png'),
-                          Textinfo: 'DataBase',
-                          Cardcolorone: whitecolor,
-                          Cardcolortwo: greycolor,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.fromLTRB(13.h, 2.h, 0, 0),
-                  child: Align(
-                    alignment: Alignment.topCenter,
-                    child: GestureDetector(
-                      onTap: () => Get.to(
-                        () => RedAppdev(),
-                        transition: Transition.fade,
-                        duration: Duration(milliseconds: 500),
-                      ),
-                      child: Container(
-                        width: 20.h,
-                        child: Techcard(
-                          Cardimage: const AssetImage('assets/app.png'),
-                          Textinfo: 'App-Dev',
-                          Cardcolorone: whitecolor,
-                          Cardcolortwo: greycolor,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            )
           ],
         ),
       ),

@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -10,6 +10,7 @@ class Mycard extends StatelessWidget {
   final AssetImage Cardimage;
   final String Textinfo;
   const Mycard({
+    super.key,
     required this.Cardcolorone,
     required this.Cardcolortwo,
     required this.Cardimage,
@@ -18,10 +19,9 @@ class Mycard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: 21.h,
-      width: 20.h,
+      width: 19.h,
       decoration: BoxDecoration(
         gradient: LinearGradient(
             colors: [Cardcolorone, Cardcolortwo],
@@ -35,7 +35,7 @@ class Mycard extends StatelessWidget {
               color: Colors.black.withOpacity(0.4),
               //spreadRadius: 1.0,
               blurRadius: 5,
-              offset: Offset(3.0, 5.0)),
+              offset: const Offset(3.0, 5.0)),
         ],
       ),
       child: Column(
@@ -89,6 +89,7 @@ class Othercard extends StatelessWidget {
   final AssetImage Cardimage;
   final String Textinfo;
   const Othercard({
+    super.key,
     required this.Cardcolor,
     required this.Cardimage,
     required this.Textinfo,
@@ -96,7 +97,6 @@ class Othercard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: 21.h,
       width: 18.h,
@@ -110,7 +110,7 @@ class Othercard extends StatelessWidget {
               color: Colors.black.withOpacity(0.4),
               //spreadRadius: 1.0,
               blurRadius: 5,
-              offset: Offset(3.0, 5.0)),
+              offset: const Offset(3.0, 5.0)),
         ],
       ),
       child: Column(
@@ -159,14 +159,14 @@ class Techcard extends StatelessWidget {
   final Color Cardcolortwo;
 
   const Techcard(
-      {required this.Cardimage,
+      {super.key,
+      required this.Cardimage,
       required this.Textinfo,
       required this.Cardcolorone,
       required this.Cardcolortwo});
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: 22.5.h,
       decoration: BoxDecoration(
@@ -216,13 +216,13 @@ class Modulecard extends StatelessWidget {
   final String Textinfo;
 
   const Modulecard({
+    super.key,
     required this.Cardimage,
     required this.Textinfo,
   });
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       height: 22.5.h,
       decoration: BoxDecoration(
